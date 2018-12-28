@@ -17,10 +17,14 @@ class CatView extends Component {
     }
     render() {
         return (
-        	<div>
-				<CatList cats={Cats} updateCat={this.updateCat} />
-				<CurrentCat cats={Cats} currentIndex={this.state.currentIndex} />
-			</div>
+        	<div className='container d-flex flex-column align-items-center' >
+                <div className='jumbotron' style={{paddingTop: 64}}>
+                    <h1 className='position-absolute' 
+                        style={{top: 0,left:0,right:0,textAlign:'center'}}>Cat Clicker</h1>
+                    <CatList cats={Cats} updateCat={this.updateCat} />
+                    <CurrentCat cats={Cats} currentIndex={this.state.currentIndex} />
+                </div>
+             </div>
         );
     }
 }
