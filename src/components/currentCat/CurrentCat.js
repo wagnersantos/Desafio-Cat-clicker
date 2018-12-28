@@ -19,11 +19,13 @@ class CurrentCat extends Component {
     render(){
         const {cats,currentIndex} = this.props;
         return (            
-                <div>
-                    <h2>{cats[currentIndex].name}</h2>
-                    <p className='cat__count'><strong>{cats[currentIndex].clickCount}</strong></p>
-                    <img src={require(`../../assets/${cats[currentIndex].imgSrc}`)} alt='cat'
-                     className='shadow-lg img-fluid border border-dark rounded'  onClick={this.incrementCounter}  />
+                <div className='row'>
+                    <div className='col-12'>
+                        <h2>{cats[currentIndex].name}</h2>
+                        <p className='cat__count'><strong>{cats[currentIndex].clickCount}</strong></p>
+                        <img src={require(`../../assets/${cats[currentIndex].imgSrc}`)} alt='cat'
+                         className='shadow-lg img-fluid border border-dark rounded'  onClick={this.incrementCounter}  />
+                    </div>
                 </div>
         )
     }
