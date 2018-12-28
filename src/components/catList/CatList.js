@@ -5,10 +5,25 @@ class CatView extends Component {
 		super(props);
 
 		this.handleClick = this.handleClick.bind(this);
+		this.classList = document.getElementsByClassName("list-group-item");
 	}
 	handleClick(e,index){
 		e.preventDefault();
 		this.props.updateCat(index);
+		this.removeClassActive();
+		this.addClassActive(index);
+	}
+	removeClassActive(){
+		for(let lists of this.classList){
+			lists.className.split(' ').forEach( function(element, ind) {
+				if(element === 'active'){
+					lists.className = lists.className.replace('active','');
+				}
+			});
+		}
+	}
+	addClassActive(index){
+		this.classList[index].classList.add('active');
 	}
     render() {
         return (
