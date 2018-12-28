@@ -8,7 +8,7 @@ class CatView extends Component {
 	}
 	handleClick(e,index){
 		e.preventDefault();
-		console.log(e.target.innerHTML);
+		this.props.updateCat(index);
 	}
     render() {
         return (
