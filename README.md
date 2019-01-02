@@ -14,3 +14,7 @@ O desafio consiste em desenvolver uma aplicação que cumpra os requisitos lista
 ### Interação
 -   Quando o nome de um gato é clicado na lista, a área de exibição dos gatos deve ser atualizada para mostrar os dados do gato selecionado.
 -   O número de cliques na área de gatos deve ser exclusivo para cada gato, e deve ser incrementado quando a foto do gato é clicada.
+
+### Resultado
+
+- O desafio foi desenvolvido com react e seu resultado pode ser visto em: https://desafio-cat-clicker.netlify.com/ 
